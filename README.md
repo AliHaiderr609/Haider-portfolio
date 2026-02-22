@@ -10,7 +10,7 @@ npm install
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. Open [https://haider-portfolio-sandy.vercel.app](https://haider-portfolio-sandy.vercel.app) in your browser.
 
 ## 📦 Build
 
