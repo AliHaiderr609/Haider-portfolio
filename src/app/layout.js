@@ -1,5 +1,59 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
+
+/** Strips attrs injected by browser extensions (e.g. Bitdefender) before/during React hydration. */
+const EXT_ATTR_STRIP_SCRIPT = `
+(function () {
+  function shouldRemove(name) {
+    return (
+      name === "bis_skin_checked" ||
+      name === "bis_register" ||
+      name === "crxlauncher" ||
+      name.indexOf("__processed") === 0 ||
+      name.indexOf("fdprocessed") === 0
+    );
+  }
+  function clean(el) {
+    if (!el || el.nodeType !== 1) return;
+    var attrs = el.attributes;
+    if (!attrs) return;
+    for (var i = attrs.length - 1; i >= 0; i--) {
+      if (shouldRemove(attrs[i].name)) el.removeAttribute(attrs[i].name);
+    }
+  }
+  function walk(root) {
+    if (!root) return;
+    clean(root);
+    if (root.querySelectorAll) root.querySelectorAll("*").forEach(clean);
+  }
+  walk(document.documentElement);
+  function onDomReady(fn) {
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn);
+    else fn();
+  }
+  onDomReady(function () {
+    walk(document.documentElement);
+  });
+  var obs = new MutationObserver(function (records) {
+    for (var r = 0; r < records.length; r++) {
+      var rec = records[r];
+      if (rec.type === "attributes") clean(rec.target);
+      if (rec.type === "childList") {
+        for (var j = 0; j < rec.addedNodes.length; j++) {
+          var n = rec.addedNodes[j];
+          if (n.nodeType === 1) walk(n);
+        }
+      }
+    }
+  });
+  obs.observe(document.documentElement, { subtree: true, childList: true, attributes: true });
+  setTimeout(function () {
+    walk(document.documentElement);
+    obs.disconnect();
+  }, 4000);
+})();
+`;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,6 +77,11 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
       >
+        <Script
+          id="strip-extension-attrs"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: EXT_ATTR_STRIP_SCRIPT }}
+        />
         {children}
       </body>
     </html>
