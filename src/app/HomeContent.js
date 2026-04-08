@@ -46,8 +46,15 @@ export default function HomeContent() {
       title: "Tours27 Platform",
       description: "Tours27 is a professional travel and tour-booking platform offering customizable Italy tour packages, transport, and guided city experiences.",
       image: "./tour27.png",
-      technologies: ["React", "Node.js", "MongoDB"],
+      technologies: ["Next.js", "Nest.js", "Postgres"],
       link: "https://tour27.com/"
+    },
+    {
+      title: "Tour27 - Guide",
+      description: "Join Tour 27 for Guides where your passion meets profit. Monetize your local expertise by leading personalized solo tours, group excursions, and roaming guide sessions for travelers worldwide.",
+      image: "./tour27-app.webp",
+      technologies: ["Android & IOS App", "Travel & Local", "Affiliate Program"],
+      link: "https://play.google.com/store/apps/details?id=com.tour27&pcampaignid=web_share"
     },
     {
       title: "The CareMd",
@@ -182,8 +189,10 @@ export default function HomeContent() {
                 Senior Software Engineer
               </h2>
               <p className="text-lg text-slate-400 mb-8">
-                With 5+ years of experience in building scalable web applications,
-                I specialize in solving complex problems with clean, efficient code.
+                With 5+ years of experience building scalable,
+                high-performance web, mobile, and desktop applications. I design reliable
+                backend architectures, optimize system performance, and deliver production-ready,
+                business-focused solutions across frontend and backend development.
               </p>
               <div className="flex space-x-4">
                 <a href="#contact" className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-medium rounded-lg shadow-md hover:opacity-90 transition">
