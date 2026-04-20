@@ -46,14 +46,14 @@ export default function HomeContent() {
       title: "Tours27 Platform",
       description: "Tours27 is a professional travel and tour-booking platform offering customizable Italy tour packages, transport, and guided city experiences.",
       image: "./tour27.png",
-      technologies: ["Next.js", "Nest.js", "Postgres", "Microservices", "Monorepo", "Stripe & Paypal Payment Gateway", "Redis"],
+      technologies: ["Next.js", "Nest.js", "Typescript", "Postgres SQL", "Firebase", "Stripe & Paypal Payment Gateway", "Microservices", "Monorepo", "Redis",],
       link: "https://tour27.com/"
     },
     {
       title: "Tour27 - Guide",
       description: "Join Tour 27 for Guides where your passion meets profit. Monetize your local expertise by leading personalized solo tours, group excursions, and roaming guide sessions for travelers worldwide.",
       image: "./tour27-app.webp",
-      technologies: ["Android & IOS App", "Travel & Local", "Affiliate Program"],
+      technologies: ["Android & IOS App", "Travel & Local", "Affiliate Program", "Typescript", "Firebase", "Stripe & Paypal Payment Gateway"],
       link: "https://play.google.com/store/apps/details?id=com.tour27&pcampaignid=web_share"
     },
     {
@@ -61,15 +61,15 @@ export default function HomeContent() {
       description:
         "A platform offering various telehealth services including consultations and prescription refills.",
       image: "/caremd.jpeg",
-      technologies: ["Next.js", "Node.Js", "WebSockets"],
+      technologies: ["Next.js", "Node.Js", "WebSockets", "Typescript", "Firebase", "Authorize.net Payment Gateway", "Microservices", "Google Analytics", "Google Ads"],
       link: "https://www.thecaremd.com"
     },
     {
-      title: "The CareMD - Mobile App",
+      title: "The CareMD - Mobile Apps",
       description:
         "A telehealth solution for patients and providers. For patients: seamless remote consultations with your trusted physician. For providers: efficient remote patient care that fits your practice.",
       image: "/caremd.jpeg",
-      technologies: ["Android & IOS App", "Telehealth"],
+      technologies: ["Android & IOS App", "Telehealth", "Authorize.net Payment Gateway", "Firebase"],
       link: "https://play.google.com/store/apps/details?id=com.arhamsoft.caremd&pcampaignid=web_share"
     },
     {
@@ -77,7 +77,7 @@ export default function HomeContent() {
       description:
         "Healthcare digital portal: streamlined appointment requests, transparent clinic hours, and structured discovery of departments and services, with clear emergency pathways. Built to present a credible, patient-first brand and reduce friction from first visit to contact.",
       image: "/alphacare.jpeg",
-      technologies: ["Next.js", "Node.js", "Healthcare", 'Stripe'],
+      technologies: ["Next.js", "Node.js", "Healthcare", 'Stripe Payment Gateway'],
       link: "https://psycube-efp8jskfb-ali-haiders-projects-bd7e8d7e.vercel.app/"
     },
     {
@@ -98,7 +98,7 @@ export default function HomeContent() {
       title: "Online Medical Consultation",
       description: "A telehealth service providing online consultations with licensed healthcare practitioners.",
       image: "/alphacare.jpeg",
-      technologies: ["React", "Redux", "Node.Js", "MongoDB", "Google ads"],
+      technologies: ["React", "Redux", "Node.Js", "Typescript", "MongoDB", "Google ads"],
       link: "https://www.alphacareinc.com"
     },
     {
@@ -200,16 +200,16 @@ export default function HomeContent() {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
               <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-4">
-                Hey, I'm <span className="gradient-text">Ali Haider</span>
+                I'm <span className="gradient-text">Ali Haider</span>
               </h1>
               <h2 className="text-2xl sm:text-3xl font-semibold text-slate-300 mb-6">
                 Senior Software Engineer
               </h2>
               <p className="text-lg text-slate-400 mb-8">
-                With 5+ years of experience building scalable,
-                high-performance web, mobile, and desktop applications. I design reliable
-                backend architectures, optimize system performance, and deliver production-ready,
-                business-focused solutions across frontend and backend development.
+                I own features end to end—from system design and APIs through web, mobile, and desktop
+                clients—and ship resilient software in production. I focus on clear architecture,
+                measurable performance, secure integrations (payments, auth, real-time), and predictable
+                delivery, working closely with product and stakeholders to align engineering with business outcomes.
               </p>
               <div className="flex space-x-4">
                 <a href="#contact" className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-medium rounded-lg shadow-md hover:opacity-90 transition">
@@ -434,10 +434,6 @@ export default function HomeContent() {
                   <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
                   SQL
                 </span>
-                <span className="flex items-center text-slate-300">
-                  <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
-                  Bash
-                </span>
               </div>
             </div>
 
@@ -458,7 +454,7 @@ export default function HomeContent() {
                 </span>
                 <span className="flex items-center text-slate-300">
                   <span className="w-2 h-2 bg-cyan-500 rounded-full mr-2"></span>
-                  Redux toolkit/thunk
+                  Redux Toolkit + Thunk
                 </span>
                 <span className="flex items-center text-slate-300">
                   <span className="w-2 h-2 bg-cyan-500 rounded-full mr-2"></span>
@@ -474,7 +470,15 @@ export default function HomeContent() {
                 </span>
                 <span className="flex items-center text-slate-300">
                   <span className="w-2 h-2 bg-cyan-500 rounded-full mr-2"></span>
-                  SASS/LESS
+                  Sass / Less
+                </span>
+                <span className="flex items-center text-slate-300">
+                  <span className="w-2 h-2 bg-cyan-500 rounded-full mr-2"></span>
+                  Electron
+                </span>
+                <span className="flex items-center text-slate-300">
+                  <span className="w-2 h-2 bg-cyan-500 rounded-full mr-2"></span>
+                  Three.js
                 </span>
               </div>
             </div>
@@ -500,7 +504,27 @@ export default function HomeContent() {
                 </span>
                 <span className="flex items-center text-slate-300">
                   <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
+                  NestJS
+                </span>
+                <span className="flex items-center text-slate-300">
+                  <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
+                  Microservices
+                </span>
+                <span className="flex items-center text-slate-300">
+                  <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
+                  Monorepo
+                </span>
+                <span className="flex items-center text-slate-300">
+                  <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
                   Django
+                </span>
+                <span className="flex items-center text-slate-300">
+                  <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
+                  FastAPI
+                </span>
+                <span className="flex items-center text-slate-300">
+                  <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
+                  LLMs & AI agents
                 </span>
                 <span className="flex items-center text-slate-300">
                   <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
@@ -560,6 +584,10 @@ export default function HomeContent() {
               <div className="grid grid-cols-2 gap-2">
                 <span className="flex items-center text-slate-300">
                   <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
+                  Git
+                </span>
+                <span className="flex items-center text-slate-300">
+                  <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
                   Docker
                 </span>
                 <span className="flex items-center text-slate-300">
@@ -573,6 +601,10 @@ export default function HomeContent() {
                 <span className="flex items-center text-slate-300">
                   <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
                   Azure
+                </span>
+                <span className="flex items-center text-slate-300">
+                  <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
+                  CI/CD
                 </span>
                 <span className="flex items-center text-slate-300">
                   <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
