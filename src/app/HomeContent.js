@@ -46,7 +46,7 @@ export default function HomeContent() {
       title: "Tours27 Platform",
       description: "Tours27 is a professional travel and tour-booking platform offering customizable Italy tour packages, transport, and guided city experiences.",
       image: "./tour27.png",
-      technologies: ["Next.js", "Nest.js", "Postgres"],
+      technologies: ["Next.js", "Nest.js", "Postgres", "Microservices", "Monorepo", "Stripe & Paypal Payment Gateway", "Redis"],
       link: "https://tour27.com/"
     },
     {
@@ -57,11 +57,28 @@ export default function HomeContent() {
       link: "https://play.google.com/store/apps/details?id=com.tour27&pcampaignid=web_share"
     },
     {
-      title: "The CareMd",
-      description: "A platform offering various telehealth services including consultations and prescription refills.",
+      title: "The CareMD",
+      description:
+        "A platform offering various telehealth services including consultations and prescription refills.",
       image: "/caremd.jpeg",
       technologies: ["Next.js", "Node.Js", "WebSockets"],
       link: "https://www.thecaremd.com"
+    },
+    {
+      title: "The CareMD - Mobile App",
+      description:
+        "A telehealth solution for patients and providers. For patients: seamless remote consultations with your trusted physician. For providers: efficient remote patient care that fits your practice.",
+      image: "/caremd.jpeg",
+      technologies: ["Android & IOS App", "Telehealth"],
+      link: "https://play.google.com/store/apps/details?id=com.arhamsoft.caremd&pcampaignid=web_share"
+    },
+    {
+      title: "PsyCube",
+      description:
+        "Healthcare digital portal: streamlined appointment requests, transparent clinic hours, and structured discovery of departments and services, with clear emergency pathways. Built to present a credible, patient-first brand and reduce friction from first visit to contact.",
+      image: "/alphacare.jpeg",
+      technologies: ["Next.js", "Node.js", "Healthcare", 'Stripe'],
+      link: "https://psycube-efp8jskfb-ali-haiders-projects-bd7e8d7e.vercel.app/"
     },
     {
       title: "Enterprise SaaS Platform",
