@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 
+
 const navLinks = [
   { href: '#about', label: 'About' },
   { href: '#experience', label: 'Experience' },
